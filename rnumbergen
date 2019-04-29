@@ -1,0 +1,19 @@
+import random
+import array
+
+print("Enter size for random distinct number generator:")
+x = input() #input for size of array
+counter = 0;
+numbers = []
+
+while counter < x + 1: #create a list of distinct integers in sequential order
+    numbers.append(counter)
+    counter += 1
+
+counter = 0
+
+while counter < x:
+    rnumber = random.choice(numbers)
+    numbers.remove(rnumber)
+    print(rnumber)
+    counter += 1
